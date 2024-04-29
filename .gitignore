@@ -1,0 +1,6 @@
+bottleneck_features\*
+dogImages\*
+lfw\*
+bottleneck_features/
+dogImages/
+lfw/
