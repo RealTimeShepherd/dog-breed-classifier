@@ -3,58 +3,8 @@
 
 This repository contains a Jupyter notebook with starting code provided by Udacity as a way to teach Convolutional Neural Networks
 
-I have also created a blog post to summarise my own learning as I undertook this course:
-https://medium.com/@paul.c.shepherd/how-can-a-machine-understand-what-its-looking-at-find-out-below-14130790d042
-
-## Rubric measures
-
-### Project definition
-
-#### Project Overview:
-The project is focused on developing a Dog Identification App as part of a Udacity Nanodegree project. The app aims to classify images of dogs according to their breeds. It is designed to work with both user-supplied images and a provided dataset of dog images and human images. The goal is to create an algorithm that can accurately identify the breed of a dog or find the closest dog breed resemblance for a detected human.
-
-#### Problem Statement:
-The main problem that needs to be solved is to develop an algorithm that can accurately classify images of dogs based on their breeds or which breed of dog the image most resembles. The algorithm should be able to detect whether a dog or a human is present in an input image and provide an estimate of the dog breed (if dog) or the closest dog breed resemblance (if human).
-
-To solve this problem, a series of models need to be developed for different tasks, including detecting humans in an image, detecting dogs in an image and inferring the dog breed. The challenge lies in piecing together these models and ensuring they work seamlessly to achieve good results.
-
-#### Metrics:
-The performance of the models will be measured using a simple accuracy metric, specifically for the dog or (human) face detections. The accuracy score will be calculated by supplying 100 images of either dogs or humans to the models and tallying the correct identifications made by each model.
-
-The choice of accuracy as the metric is justified based on the problem characteristics. Since the goal is to correctly classify the dog images into their respective breeds, accuracy provides a straightforward measure of how well the model performs. Higher accuracy values indicate a more successful model in accurately identifying dogs or faces.
-
-### Analysis
-
-#### Data exploration
-The dataset provided for the Dog Identification App project consists of dog images and human images.
-
-1. Dog Images:
-   - Total dog categories: 133
-   - Total dog images: 8351
-   - Training dog images: 6680
-   - Validation dog images: 835
-   - Test dog images: 836
-
-2. Human Images:
-   - Total human images: 13233
-
-The dog image dataset is partitioned into three sets: training, validation, and test sets. The training set consists of 6680 dog images, which will be used to train the model. The validation set has 835 dog images, which will be used to evaluate the model's performance during training. The test set contains 836 dog images, which will be used to assess the final model's generalisation ability.
-
-In addition to the dog images, there are 13233 human images included in the dataset. These images will be used to assess the accuracy of the face detector models
-
-### Conclusion
-
-#### Reflection
-Throughout this Udacity project, the end-to-end problem solution was achieved by utilising pretrained models such as OpenCV for human face detection, ResNet-50 for dog detection, and VGG-19 for dog breed detection. The algorithm successfully tested the submitted image for dog or face detection using OpenCV and ResNet-50, and then utilised VGG-19 to detect the dog breed or the closest resemblance if a human face was detected.
-
-One particular aspect of the project that I found interesting was the use of Convolutional Neural Networks (CNNs). As someone new to this field, CNNs initially appeared complex with multiple layers of processing and unfamiliar terminology. However, diving into the project allowed me to gain a deeper understanding of how CNNs work and their application in image classification tasks. The opportunity to explore and comprehend CNNs was a rewarding experience during this project.
-
-#### Improvements
-One aspect that could be improved in the implementation is handling images of mongrel dogs or dogs without a recognisable breed. During testing, the current solution was shown to misclassify such dogs by assigning them a breed that is not accurate. To address this, one potential solution would be to incorporate a mechanism to detect when a dog image does not belong to any of the recognised breeds. This could involve adding an additional classification category for "Unknown Breed" or adding a separate model dedicated to identifying mixed breed dogs.
-
-Other improvements might involve using transfer learning on a larger and more comprehensive dataset to improve the classification capabilities of the pre-trained models
-
-Given my newfound understanding of CNNs I was inspired to create a blog post detailing what I had discovered about the inner workings of the CNN pipeline with some visualisations of the functionality. Link is at the top of this readme.
+I have also created a blog post to meet the rubric requirements as I undertook this course:
+https://medium.com/@paul.c.shepherd/dog-breed-classifier-project-be45d9ff24f2
 
 ## Libraries used
 
